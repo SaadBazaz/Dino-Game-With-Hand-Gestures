@@ -47,7 +47,7 @@ In this version we again do background subtraction and everything up to the part
 
 These values, which were calculated for every sample we took by recording. We then trained the model using these feature vectors and made predictions by the model. 
 
-References:
+# References
 https://gogul.dev/software/hand-gesture-recognition-p1
 https://gogul.dev/software/hand-gesture-recognition-p2#contours
 https://www.youtube.com/watch?v=QkO_3absfdw
