@@ -30,7 +30,9 @@ Continue: Now after thresholding we take the background subtracted and threshold
 ### Explanation
 In this version we again do background subtraction and everything up to the part where we draw a circle around the hand. Now what we do is, we record some frames with our hands open, and extract the features of the hand open frames, then we record some frames with our hands closed and extract the features of those frames. Our feature vector included
 
-```feature_vector = np.array([
+```
+...
+feature_vector = np.array([
         chull_mean,         # The mean of the Convex Hull
         chull_std,          # The standard deviation of the Convex Hull
         maximum_distance,   # The maximum distance of an extreme point from the palm
@@ -45,6 +47,7 @@ In this version we again do background subtraction and everything up to the part
         np.mean(cnts_std),  # The mean of the standard deviation of countours
         count               # The predicted finger count
     ], dtype=np.float32)
+...
 ```
 These values, which were calculated for every sample we took by recording. We then trained the model using these feature vectors and made predictions by the model. 
 
