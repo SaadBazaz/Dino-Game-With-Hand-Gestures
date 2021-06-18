@@ -29,22 +29,23 @@ Continue: Now after thresholding we take the background subtracted and threshold
 ## Version 3: Dino Game with hand gestures using SVM
 ### Explanation
 In this version we again do background subtraction and everything up to the part where we draw a circle around the hand. Now what we do is, we record some frames with our hands open, and extract the features of the hand open frames, then we record some frames with our hands closed and extract the features of those frames. Our feature vector included
- feature_vector = np.array([
-        chull_mean,
-        chull_std,
-        maximum_distance,
-        minimum_distance,
-        distances_mean,
-        distances_std,
-        radius,
-        circumference,
-        circular_roi_mean,
-        circular_roi_std,
-        np.mean(cnts_mean),
-        np.mean(cnts_std),
-        count
-    ], dtype=np.float32)
 
+```feature_vector = np.array([
+        chull_mean,         # The mean of the Convex Hull
+        chull_std,          # The standard deviation of the Convex Hull
+        maximum_distance,   # The maximum distance of an extreme point from the palm
+        minimum_distance,   # The minimum distance of an extreme point from the palm
+        distances_mean,     # The average distance of all extreme points from the palm
+        distances_std,      # The average distance of all extreme points from the palm
+        radius,             # The radius of the circle drawn from the palm
+        circumference,      # The circumference of the circle drawn from the palm
+        circular_roi_mean,  # The mean of the circular region of interest (intersection with the circle with fingers)
+        circular_roi_std,   # The standard deviation of the circular region of interest (intersection with the circle with fingers)
+        np.mean(cnts_mean), # The mean of the average countours
+        np.mean(cnts_std),  # The mean of the standard deviation of countours
+        count               # The predicted finger count
+    ], dtype=np.float32)
+```
 These values, which were calculated for every sample we took by recording. We then trained the model using these feature vectors and made predictions by the model. 
 
 # References
