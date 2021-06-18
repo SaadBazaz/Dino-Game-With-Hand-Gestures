@@ -9,6 +9,12 @@ Submitted to: Mr Shoaib Mehboob
 Digital Image Processing, Spring 2021
 Bachelors of Computer Science, National University of Computing and Emerging Sciences, Islamabad.
 
+# Installation
+- Download the Notebook files and open in a Python Notebook Editor (like Jupyter Notebooks).
+- Download chromedriver for your OS, and place it in the ```t-rex-runner-gh-pages``` folder.
+- Fix the paths to chromedriver in the notebooks, according to your folder
+- Run and enjoy!
+
 # Versions:
 ## Version 1: Dino Game with hand gestures using mediapipe
 ### Explanation
