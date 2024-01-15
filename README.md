@@ -1,5 +1,7 @@
 # Google Dino Game With Hand Gestures
 
+Watch the video: https://www.linkedin.com/posts/saadbazaz_first-time-learning-opencv-and-my-awesome-activity-6811662368624386048-tbXw
+
 ## Contributions
 Saad Bazaz
 
